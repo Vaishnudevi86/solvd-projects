@@ -1,4 +1,4 @@
-package bankJason;
+package bankJson;
 
 import java.util.List;
 

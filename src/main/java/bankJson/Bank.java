@@ -1,4 +1,4 @@
-package bankJason;
+package bankJson;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
