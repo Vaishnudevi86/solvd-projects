@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bank>
+    <name>ABC Bank</name>
+    <establishedDate>2022-01-01</establishedDate>
+    <departments>
+        <department>
+            <name>Accounting</name>
+            <employees>
+                <employee>
+                    <name>John Doe</name>
+                    <position>Accountant</position>
+                </employee>
+                <employee>
+                    <name>Jane Smith</name>
+                    <position>Assistant Accountant</position>
+                </employee>
+                <employee>
+                    <name>Michael Johnson</name>
+                    <position>Accounting Analyst</position>
+                </employee>
+                <employee>
+                    <name>Sarah Williams</name>
+                    <position>Accounting Clerk</position>
+                </employee>
+            </employees>
+        </department>
+        <department>
+            <name>Operations</name>
+            <employees>
+                <employee>
+                    <name>Robert Davis</name>
+                    <position>Operations Manager</position>
+                </employee>
+                <employee>
+                    <name>Emily Wilson</name>
+                    <position>Operations Assistant</position>
+                </employee>
+                <employee>
+                    <name>William Thompson</name>
+                    <position>Operations Supervisor</position>
+                </employee>
+                <employee>
+                    <name>Olivia Harris</name>
+                    <position>Operations Coordinator</position>
+                </employee>
+            </employees>
+        </department>
+    </departments>
+    <accounts>
+        <savingsAccount>
+            <accountNumber>SA123456789</accountNumber>
+            <balance>5000.0</balance>
+            <interestRate>0.05</interestRate>
+            <holders>
+                <holder>John Doe</holder>
+                <holder>Jane Smith</holder>
+                <holder>Michael Johnson</holder>
+            </holders>
+        </savingsAccount>
+        <savingsAccount>
+            <accountNumber>SA987654321</accountNumber>
+            <balance>10000.0</balance>
+            <interestRate>0.03</interestRate>
+            <holders>
+                <holder>Robert Davis</holder>
+                <holder>Emily Wilson</holder>
+                <holder>William Thompson</holder>
+                <holder>Olivia Harris</holder>
+            </holders>
+        </savingsAccount>
+        <creditAccount>
+            <accountNumber>CA123456789</accountNumber>
+            <balance>-1000.0</balance>
+            <creditLimit>5000.0</creditLimit>
+            <holders>
+                <holder>John Doe</holder>
+                <holder>Robert Davis</holder>
+                <holder>William Thompson</holder>
+            </holders>
+        </creditAccount>
+        <creditAccount>
+            <accountNumber>CA987654321</accountNumber>
+            <balance>-500.0</balance>
+            <creditLimit>2000.0</creditLimit>
+            <holders>
+                <holder>Jane Smith</holder>
+                <holder>Emily Wilson</holder>
+                <holder>Olivia Harris</holder>
+            </holders>
+        </creditAccount>
+    </accounts>
+</bank>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bankHierarchy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="bankHierarchy.xsd">
+    <bank>
+        <name>Bank A</name>
+        <branches>
+            <branch>
+                <name>Branch 1</name>
+                <employees>
+                    <employee>
+                        <name>John Doe</name>
+                    </employee>
+                    <employee>
+                        <name>Jane Smith</name>
+                    </employee>
+                </employees>
+                <customers>
+                    <customer>
+                        <name>David Johnson</name>
+                        <accounts>
+                            <account>
+                                <type>Savings</type>
+                                <balance>5000</balance>
+                            </account>
+                            <account>
+                                <type>Checking</type>
+                                <balance>2000</balance>
+                            </account>
+                        </accounts>
+                    </customer>
+                </customers>
+            </branch>
+            <branch>
+                <name>Branch 2</name>
+                <employees>
+                    <employee>
+                        <name>Robert Brown</name>
+                    </employee>
+                </employees>
+                <customers>
+                    <customer>
+                        <name>Michael Davis</name>
+                        <accounts>
+                            <account>
+                                <type>Savings</type>
+                                <balance>10000</balance>
+                            </account>
+                        </accounts>
+                    </customer>
+                    <customer>
+                        <name>Lisa Wilson</name>
+                        <accounts>
+                            <account>
+                                <type>Checking</type>
+                                <balance>5000</balance>
+                            </account>
+                        </accounts>
+                    </customer>
+                </customers>
+            </branch>
+        </branches>
+    </bank>
+</bankHierarchy>

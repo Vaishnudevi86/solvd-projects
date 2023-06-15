@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bankHierarchy" type="bankHierarchyType"/>
+  <xs:complexType name="employeeType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="John Doe"/>
+            <xs:enumeration value="Jane Smith"/>
+            <xs:enumeration value="Robert Brown"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="employeesType">
+    <xs:sequence>
+      <xs:element type="employeeType" name="employee" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountType">
+    <xs:sequence>
+      <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Savings"/>
+            <xs:enumeration value="Checking"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="balance">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="5000"/>
+            <xs:enumeration value="2000"/>
+            <xs:enumeration value="10000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountsType">
+    <xs:sequence>
+      <xs:element type="accountType" name="account" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customerType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="David Johnson"/>
+            <xs:enumeration value="Michael Davis"/>
+            <xs:enumeration value="Lisa Wilson"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="accountsType" name="accounts"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customersType">
+    <xs:sequence>
+      <xs:element type="customerType" name="customer" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="branchType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Branch 1"/>
+            <xs:enumeration value="Branch 2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="employeesType" name="employees"/>
+      <xs:element type="customersType" name="customers"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="branchesType">
+    <xs:sequence>
+      <xs:element type="branchType" name="branch" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bankType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="branchesType" name="branches"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bankHierarchyType">
+    <xs:sequence>
+      <xs:element type="bankType" name="bank"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,124 @@
+{
+  "name": "ABC Bank",
+  "establishedDate": "2022-01-01",
+  "departments": [
+    {
+      "name": "Accounting",
+      "employees": [
+        {
+          "name": "John Doe",
+          "position": "Accountant"
+        },
+        {
+          "name": "Jane Smith",
+          "position": "Assistant Accountant"
+        },
+        {
+          "name": "Michael Johnson",
+          "position": "Accounting Analyst"
+        },
+        {
+          "name": "Sarah Williams",
+          "position": "Accounting Clerk"
+        },
+        {
+          "name": "Emily Davis",
+          "position": "Junior Accountant"
+        },
+        {
+          "name": "Robert Wilson",
+          "position": "Accounting Supervisor"
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "employees": [
+        {
+          "name": "Robert Davis",
+          "position": "Operations Manager"
+        },
+        {
+          "name": "Emily Wilson",
+          "position": "Operations Assistant"
+        },
+        {
+          "name": "William Thompson",
+          "position": "Operations Supervisor"
+        },
+        {
+          "name": "Olivia Harris",
+          "position": "Operations Coordinator"
+        },
+        {
+          "name": "Sophia Anderson",
+          "position": "Operations Analyst"
+        }
+      ]
+    },
+    {
+      "name": "Customer Service",
+      "employees": [
+        {
+          "name": "Jacob Martin",
+          "position": "Customer Service Representative"
+        },
+        {
+          "name": "Ava Johnson",
+          "position": "Customer Service Representative"
+        },
+        {
+          "name": "Liam Wilson",
+          "position": "Customer Service Supervisor"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "type": "savingsAccount",
+      "accountNumber": "SA123456789",
+      "balance": 5000.0,
+      "interestRate": 0.05,
+      "holders": [
+        "John Doe",
+        "Jane Smith",
+        "Michael Johnson"
+      ]
+    },
+    {
+      "type": "savingsAccount",
+      "accountNumber": "SA987654321",
+      "balance": 10000.0,
+      "interestRate": 0.03,
+      "holders": [
+        "Robert Davis",
+        "Emily Wilson",
+        "William Thompson",
+        "Olivia Harris"
+      ]
+    },
+    {
+      "type": "creditAccount",
+      "accountNumber": "CA123456789",
+      "balance": -1000.0,
+      "creditLimit": 5000.0,
+      "holders": [
+        "John Doe",
+        "Robert Davis",
+        "William Thompson"
+      ]
+    },
+    {
+      "type": "creditAccount",
+      "accountNumber": "CA987654321",
+      "balance": -500.0,
+      "creditLimit": 2000.0,
+      "holders": [
+        "Jane Smith",
+        "Emily Wilson",
+        "Olivia Harris"
+      ]
+    }
+  ]
+}
