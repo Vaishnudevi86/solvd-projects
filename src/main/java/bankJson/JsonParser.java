@@ -1,14 +1,15 @@
 package bankJson;
 
+import bankdao.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 
-public class Main {
+public class JsonParser {
     public static void main(String[] args) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Bank bank = objectMapper.readValue(new File("C:\\Users\\deviv\\IdeaProjects\\solvd-projects\\src\\main\\java\\bankJason\\bank_hierarchy.json"), Bank.class);
+            Bank bank = objectMapper.readValue(new File(".\\src\\main\\java\\bankJson\\bank_hierarchy.json"), Bank.class);
 
             System.out.println("Bank name: " + bank.getName());
             System.out.println("Established date: " + bank.getEstablishedDate());

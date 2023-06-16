@@ -1,4 +1,4 @@
-package bankdao.model;
+package bankdao.entity;
 
 import java.util.Date;
 

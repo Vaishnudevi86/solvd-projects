@@ -1,17 +1,16 @@
 package bankdao.interfaces;
 
-import bankdao.model.Account;
-import bankdao.model.AccountHolder;
-import bankdao.model.AccountHolderTransaction;
+import bankdao.entity.AccountEntity;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface AccountDAO {
 
-    List<Account> getAllAccount();
-    Account getAccountById(int id);
-        void save(Account account);
-        void update(Account account);
-        void delete(Account account);
+    List<AccountEntity> getAllAccount();
+    AccountEntity getAccountById(int id);
+        void save(AccountEntity accountEntity);
+        void update(AccountEntity accountEntity) throws SQLException;
+        void delete(int accountId);
     }
 

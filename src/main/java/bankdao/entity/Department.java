@@ -1,5 +1,4 @@
-package bankJaxb;
-
+package bankdao.entity;
 
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,13 +9,21 @@ import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Department {
+    @XmlElement(name = "name")
     private String name;
 
     @XmlElementWrapper(name = "employees")
     @XmlElement(name = "employee")
     private List<Employee> employees;
 
-    // Getters and setters
+    public Department() {
+    }
+
+    public Department(String name, List<Employee> employees) {
+        this.name = name;
+        this.employees = employees;
+    }
+// Getters and setters
 
     public String getName() {
         return name;
@@ -32,21 +39,5 @@ public class Department {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
-    }
-
-    public Department() {
-    }
-
-    public Department(String name, List<Employee> employees) {
-        this.name = name;
-        this.employees = employees;
-    }
-
-    @Override
-    public String toString() {
-        return "Department{" +
-                "name='" + name + '\'' +
-                ", employees=" + employees +
-                '}';
     }
 }

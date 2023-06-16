@@ -1,6 +1,6 @@
 package bankdao.services;
 import bankdao.interfaces.DepositDAO;
-import bankdao.model.Deposit;
+import bankdao.entity.Deposit;
 
 import java.util.List;
 

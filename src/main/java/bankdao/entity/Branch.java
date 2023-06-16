@@ -1,4 +1,4 @@
-package bankdao.model;
+package bankdao.entity;
 
 
 import javax.xml.bind.annotation.XmlElement;

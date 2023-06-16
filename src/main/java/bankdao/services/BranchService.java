@@ -1,7 +1,7 @@
 package bankdao.services;
 
 import bankdao.interfaces.BranchDAO;
-import bankdao.model.Branch;
+import bankdao.entity.Branch;
 
 import java.sql.SQLException;
 import java.util.List;

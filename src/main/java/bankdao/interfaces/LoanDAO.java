@@ -1,7 +1,6 @@
 package bankdao.interfaces;
 
-import bankdao.model.Account;
-import bankdao.model.Loan;
+import bankdao.entity.Loan;
 
 import java.util.List;
 

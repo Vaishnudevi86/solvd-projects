@@ -1,11 +1,14 @@
 package bankJaxb;
+
+import bankdao.model.*;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.List;
 
-public class BankOperations {
+public class BankOperationsParser {
     public static void main(String[] args) {
         try {
             // Create JAXBContext
@@ -15,7 +18,7 @@ public class BankOperations {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
             // Specify the XML file to unmarshal
-            File xmlFile = new File("C:\\Users\\deviv\\IdeaProjects\\solvd-projects\\src\\main\\java\\bankJaxb\\bankJaxb.xml");
+            File xmlFile = new File(".\\src\\main\\java\\bankJaxb\\bankJaxb.xml");
 
             // Unmarshal XML to Java object
             Bank bank = (Bank) unmarshaller.unmarshal(xmlFile);

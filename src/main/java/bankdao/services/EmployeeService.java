@@ -1,7 +1,7 @@
 package bankdao.services;
 
 import bankdao.interfaces.EmployeeDAO;
-import bankdao.model.Employee;
+import bankdao.entity.Employee;
 
 import java.util.List;
 
