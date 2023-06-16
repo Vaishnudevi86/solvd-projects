@@ -11,6 +11,7 @@ import bankdao.services.EmployeeService;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
+import static com.solvd.practice.Main.logger;
 
 public class Menu {
     private BankService bankService;
@@ -32,32 +33,32 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("\n===== Bank Hierarchy Menu =====");
-            System.out.println("1. Create Bank");
-            System.out.println("2. Get Bank Details");
-            System.out.println("3. Update Bank Details");
-            System.out.println("4. Delete Bank");
-           /* System.out.println("5. Create Account");
-            System.out.println("6. Get Account Details");
-            System.out.println("7. Update Account Details");
-            System.out.println("8. Delete Account");
-            System.out.println("9. Create Department");
-            System.out.println("10. Get Department Details");
-            System.out.println("11. Update Department Details");
-            System.out.println("12. Delete Department");
-            System.out.println("13. Create Credit Account");
-            System.out.println("14. Get Credit Account Details");
-            System.out.println("15. Update Credit Account Details");
-            System.out.println("16. Delete Credit Account");
-            System.out.println("17. Create Savings Account");
-            System.out.println("18. Get Savings Account Details");
-            System.out.println("19. Update Savings Account Details");
-            System.out.println("20. Delete Savings Account");
-            System.out.println("21. Create Employee");
-            System.out.println("22. Get Employee Details");
-            System.out.println("23. Update Employee Details");
-            System.out.println("24. Delete Employee");*/
-            System.out.println("0. Exit");
+            logger.info("\n===== Bank Hierarchy Menu =====");
+            logger.info("1. Create Bank");
+            logger.info("2. Get Bank Details");
+            logger.info("3. Update Bank Details");
+            logger.info("4. Delete Bank");
+           /* logger.info("5. Create Account");
+            logger.info("6. Get Account Details");
+            logger.info("7. Update Account Details");
+            logger.info("8. Delete Account");
+            logger.info("9. Create Department");
+            logger.info("10. Get Department Details");
+            logger.info("11. Update Department Details");
+            logger.info("12. Delete Department");
+            logger.info("13. Create Credit Account");
+            logger.info("14. Get Credit Account Details");
+            logger.info("15. Update Credit Account Details");
+            logger.info("16. Delete Credit Account");
+            logger.info("17. Create Savings Account");
+            logger.info("18. Get Savings Account Details");
+            logger.info("19. Update Savings Account Details");
+            logger.info("20. Delete Savings Account");
+            logger.info("21. Create Employee");
+            logger.info("22. Get Employee Details");
+            logger.info("23. Update Employee Details");
+            logger.info("24. Delete Employee");*/
+            logger.info("0. Exit");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -115,7 +116,7 @@ public class Menu {
                 scanner.nextLine(); // Consume the newline character
                 account = new SavingsAccountEntity(accountNumber, accountBalance, interestRate);
             } else {
-                System.out.println("Invalid account type.");
+                logger.info("Invalid account type.");
                 return;
             }
 
@@ -126,38 +127,38 @@ public class Menu {
                 bank.addAccount(account);
                 // Update the bank in the database
                 bankService.updateBank(bank);
-                System.out.println("Account created successfully.");
+                logger.info("Account created successfully.");
             } else {
-                System.out.println("Bank not found.");
+                logger.info("Bank not found.");
             }
         }
         catch (Exception e) {
-            System.out.println("An error occurred: " + e.getMessage());
+            logger.info("An error occurred: " + e.getMessage());
             e.printStackTrace();
         }
     }*/
 
     private void updateBankDetails(Scanner scanner) {
-        System.out.println("Choose the bank ID for which you want to update:");
+        logger.info("Choose the bank ID for which you want to update:");
         try {
             List<BankEntity> bankEntityList = bankService.getAllBanks();
-            bankEntityList.forEach(bankEntity -> System.out.println(bankEntity.getBank_id() + "\t" + bankEntity.getBank_name()));
+            bankEntityList.forEach(bankEntity -> logger.info(bankEntity.getBank_id() + "\t" + bankEntity.getBank_name()));
             int bankID = scanner.nextInt();
-            System.out.println("Select option to update");
-            System.out.println("1. Address 2. Contact Number");
+            logger.info("Select option to update");
+            logger.info("1. Address 2. Contact Number");
             int updateChoice = scanner.nextInt();
             scanner.nextLine();
             BankEntity bankEntity = new BankEntity();
             bankEntity.setBank_id(bankID);
             switch (updateChoice) {
                 case 1:
-                    System.out.println("Enter new address");
+                    logger.info("Enter new address");
                     String newAddress = scanner.nextLine();
                     bankEntity.setAddress(newAddress);
                     bankService.updateBank(bankEntity);
                     break;
                 case 2:
-                    System.out.println("Enter new contact number");
+                    logger.info("Enter new contact number");
                     String newContact = scanner.nextLine();
                     bankEntity.setContact_number(newContact);
                     bankService.updateBank(bankEntity);
@@ -172,9 +173,9 @@ public class Menu {
 
     private void getBankDetails(Scanner scanner)  {
         try{
-            System.out.println("Getting all bank details:");
+            logger.info("Getting all bank details:");
             List<BankEntity> bankEntityList = bankService.getAllBanks();
-            bankEntityList.forEach(bankEntity -> System.out.println(bankEntity.toString()));
+            bankEntityList.forEach(bankEntity -> logger.info(bankEntity.toString()));
         }
         catch(SQLException e){
 
@@ -184,17 +185,17 @@ public class Menu {
 
     private void createBank(Scanner scanner) {
         try {
-            System.out.println("Enter Bank Name:");
+            logger.info("Enter Bank Name:");
             String bankName = scanner.nextLine();
-            System.out.println("Enter Bank Address:");
+            logger.info("Enter Bank Address:");
             String bankAddress = scanner.nextLine();
-            System.out.println("Enter Bank Contact Number:");
+            logger.info("Enter Bank Contact Number:");
             String bankContactNumber = scanner.nextLine();
             BankEntity bankEntity = new BankEntity(bankName, bankAddress, bankContactNumber);
             bankService.saveBank(bankEntity);
-            System.out.println("Successfully Created Bank " + bankName);
+            logger.info("Successfully Created Bank " + bankName);
         }catch (SQLException sqlException) {
-            System.out.println("Caught exception while saving bank details");
+            logger.info("Caught exception while saving bank details");
         }
 
     }
@@ -204,16 +205,16 @@ public class Menu {
         scanner.nextLine(); // Consume the newline character
 
         try {
-            System.out.println("Select option to update");
+            logger.info("Select option to update");
             BankEntity bank = bankService.getBankById(bankId);
             if (bank != null) {
                 bankService.deleteBank(bank);
-                System.out.println("Bank deleted successfully.");
+                logger.info("Bank deleted successfully.");
             } else {
-                System.out.println("Bank not found.");
+                logger.info("Bank not found.");
             }
         } catch (Exception e) {
-            System.out.println("An error occurred: " + e.getMessage());
+            logger.info("An error occurred: " + e.getMessage());
             e.printStackTrace();
         }
 

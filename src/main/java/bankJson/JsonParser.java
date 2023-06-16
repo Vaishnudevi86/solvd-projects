@@ -1,9 +1,10 @@
 package bankJson;
-
 import bankdao.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
+
+import static com.solvd.practice.Main.logger;
 
 public class JsonParser {
     public static void main(String[] args) {
@@ -11,31 +12,31 @@ public class JsonParser {
         try {
             Bank bank = objectMapper.readValue(new File(".\\src\\main\\java\\bankJson\\bank_hierarchy.json"), Bank.class);
 
-            System.out.println("Bank name: " + bank.getName());
-            System.out.println("Established date: " + bank.getEstablishedDate());
-            System.out.println("Departments:");
+            logger.info("Bank name: " + bank.getName());
+            logger.info("Established date: " + bank.getEstablishedDate());
+            logger.info("Departments:");
             for (Department department : bank.getDepartments()) {
-                System.out.println("- Department name: " + department.getName());
-                System.out.println("  Employees:");
+                logger.info("- Department name: " + department.getName());
+                logger.info("  Employees:");
                 for (Employee employee : department.getEmployees()) {
-                    System.out.println("  - Employee name: " + employee.getName());
-                    System.out.println("    Position: " + employee.getPosition());
+                    logger.info("  - Employee name: " + employee.getName());
+                    logger.info("    Position: " + employee.getPosition());
                 }
             }
-            System.out.println("Accounts:");
+            logger.info("Accounts:");
             for (Account account : bank.getAccounts()) {
-                System.out.println("- Account number: " + account.getAccountNumber());
-                System.out.println("  Balance: " + account.getBalance());
+                logger.info("- Account number: " + account.getAccountNumber());
+                logger.info("  Balance: " + account.getBalance());
                 if (account instanceof SavingsAccount) {
                     SavingsAccount savingsAccount = (SavingsAccount) account;
-                    System.out.println("  Interest rate: " + savingsAccount.getInterestRate());
+                    logger.info("  Interest rate: " + savingsAccount.getInterestRate());
                 } else if (account instanceof CreditAccount) {
                     CreditAccount creditAccount = (CreditAccount) account;
-                    System.out.println("  Credit limit: " + creditAccount.getCreditLimit());
+                    logger.info("  Credit limit: " + creditAccount.getCreditLimit());
                 }
-                System.out.println("  Holders:");
+                logger.info("  Holders:");
                 for (String holder : account.getHolders()) {
-                    System.out.println("  - Holder: " + holder);
+                    logger.info("  - Holder: " + holder);
                 }
             }
         } catch (IOException e) {

@@ -1,12 +1,67 @@
-2023-06-06 20:01:06.531 [main] INFO  buildingcompany.Main - New bankEntity details added successfully
-2023-06-06 20:01:06.555 [main] INFO  buildingcompany.Main - All the bankEntity details in the table
-2023-06-06 20:04:32.828 [main] INFO  buildingcompany.Main - New bankEntity details added successfully
-2023-06-06 20:04:32.834 [main] INFO  buildingcompany.Main - All the bankEntity details in the table
-2023-06-06 20:06:46.541 [main] INFO  buildingcompany.Main - New bankEntity details added successfully
-2023-06-06 20:06:46.545 [main] INFO  buildingcompany.Main - All the bankEntity details in the table
-2023-06-06 20:06:46.574 [main] INFO  buildingcompany.Main - Bank details deleted successfully
-2023-06-06 20:06:46.579 [main] INFO  buildingcompany.Main - Bank details for the bank_id entered is: Bank{bank_id=34, bank_name='Canara', address='54 First main rd Atlanta', contact_number='566886989'}
-2023-06-06 22:43:52.986 [main] INFO  buildingcompany.Main - New bankEntity details added successfully
-2023-06-06 22:43:52.992 [main] INFO  buildingcompany.Main - All the bankEntity details in the table
-2023-06-06 22:43:53.020 [main] INFO  buildingcompany.Main - Bank details deleted successfully
-2023-06-06 22:43:53.023 [main] INFO  buildingcompany.Main - Bank details for the bank_id entered is: Bank{bank_id=34, bank_name='Canara', address='54 First main rd Atlanta', contact_number='566886989'}
+2023-06-16 21:52:09.920 [main] INFO  buildingcompany.Main - Bank name: ABC Bank
+2023-06-16 21:52:09.950 [main] INFO  buildingcompany.Main - Established date: Sat Jan 01 05:30:00 IST 2022
+2023-06-16 21:52:09.950 [main] INFO  buildingcompany.Main - Departments:
+2023-06-16 21:52:09.951 [main] INFO  buildingcompany.Main - - Department name: Accounting
+2023-06-16 21:52:09.951 [main] INFO  buildingcompany.Main -   Employees:
+2023-06-16 21:52:09.951 [main] INFO  buildingcompany.Main -   - Employee name: John Doe
+2023-06-16 21:52:09.953 [main] INFO  buildingcompany.Main -     Position: Accountant
+2023-06-16 21:52:09.953 [main] INFO  buildingcompany.Main -   - Employee name: Jane Smith
+2023-06-16 21:52:09.954 [main] INFO  buildingcompany.Main -     Position: Assistant Accountant
+2023-06-16 21:52:09.954 [main] INFO  buildingcompany.Main -   - Employee name: Michael Johnson
+2023-06-16 21:52:09.954 [main] INFO  buildingcompany.Main -     Position: Accounting Analyst
+2023-06-16 21:52:09.955 [main] INFO  buildingcompany.Main -   - Employee name: Sarah Williams
+2023-06-16 21:52:09.955 [main] INFO  buildingcompany.Main -     Position: Accounting Clerk
+2023-06-16 21:52:09.955 [main] INFO  buildingcompany.Main -   - Employee name: Emily Davis
+2023-06-16 21:52:09.957 [main] INFO  buildingcompany.Main -     Position: Junior Accountant
+2023-06-16 21:52:09.957 [main] INFO  buildingcompany.Main -   - Employee name: Robert Wilson
+2023-06-16 21:52:09.957 [main] INFO  buildingcompany.Main -     Position: Accounting Supervisor
+2023-06-16 21:52:09.957 [main] INFO  buildingcompany.Main - - Department name: Operations
+2023-06-16 21:52:09.957 [main] INFO  buildingcompany.Main -   Employees:
+2023-06-16 21:52:09.957 [main] INFO  buildingcompany.Main -   - Employee name: Robert Davis
+2023-06-16 21:52:09.958 [main] INFO  buildingcompany.Main -     Position: Operations Manager
+2023-06-16 21:52:09.958 [main] INFO  buildingcompany.Main -   - Employee name: Emily Wilson
+2023-06-16 21:52:09.958 [main] INFO  buildingcompany.Main -     Position: Operations Assistant
+2023-06-16 21:52:09.958 [main] INFO  buildingcompany.Main -   - Employee name: William Thompson
+2023-06-16 21:52:09.958 [main] INFO  buildingcompany.Main -     Position: Operations Supervisor
+2023-06-16 21:52:09.958 [main] INFO  buildingcompany.Main -   - Employee name: Olivia Harris
+2023-06-16 21:52:09.959 [main] INFO  buildingcompany.Main -     Position: Operations Coordinator
+2023-06-16 21:52:09.959 [main] INFO  buildingcompany.Main -   - Employee name: Sophia Anderson
+2023-06-16 21:52:09.959 [main] INFO  buildingcompany.Main -     Position: Operations Analyst
+2023-06-16 21:52:09.960 [main] INFO  buildingcompany.Main - - Department name: Customer Service
+2023-06-16 21:52:09.960 [main] INFO  buildingcompany.Main -   Employees:
+2023-06-16 21:52:09.960 [main] INFO  buildingcompany.Main -   - Employee name: Jacob Martin
+2023-06-16 21:52:09.961 [main] INFO  buildingcompany.Main -     Position: Customer Service Representative
+2023-06-16 21:52:09.961 [main] INFO  buildingcompany.Main -   - Employee name: Ava Johnson
+2023-06-16 21:52:09.961 [main] INFO  buildingcompany.Main -     Position: Customer Service Representative
+2023-06-16 21:52:09.962 [main] INFO  buildingcompany.Main -   - Employee name: Liam Wilson
+2023-06-16 21:52:09.962 [main] INFO  buildingcompany.Main -     Position: Customer Service Supervisor
+2023-06-16 21:52:09.962 [main] INFO  buildingcompany.Main - Accounts:
+2023-06-16 21:52:09.962 [main] INFO  buildingcompany.Main - - Account number: SA123456789
+2023-06-16 21:52:09.965 [main] INFO  buildingcompany.Main -   Balance: 5000.0
+2023-06-16 21:52:09.966 [main] INFO  buildingcompany.Main -   Interest rate: 0.05
+2023-06-16 21:52:09.966 [main] INFO  buildingcompany.Main -   Holders:
+2023-06-16 21:52:09.966 [main] INFO  buildingcompany.Main -   - Holder: John Doe
+2023-06-16 21:52:09.967 [main] INFO  buildingcompany.Main -   - Holder: Jane Smith
+2023-06-16 21:52:09.967 [main] INFO  buildingcompany.Main -   - Holder: Michael Johnson
+2023-06-16 21:52:09.967 [main] INFO  buildingcompany.Main - - Account number: SA987654321
+2023-06-16 21:52:09.969 [main] INFO  buildingcompany.Main -   Balance: 10000.0
+2023-06-16 21:52:09.969 [main] INFO  buildingcompany.Main -   Interest rate: 0.03
+2023-06-16 21:52:09.969 [main] INFO  buildingcompany.Main -   Holders:
+2023-06-16 21:52:09.969 [main] INFO  buildingcompany.Main -   - Holder: Robert Davis
+2023-06-16 21:52:09.969 [main] INFO  buildingcompany.Main -   - Holder: Emily Wilson
+2023-06-16 21:52:09.970 [main] INFO  buildingcompany.Main -   - Holder: William Thompson
+2023-06-16 21:52:09.970 [main] INFO  buildingcompany.Main -   - Holder: Olivia Harris
+2023-06-16 21:52:09.970 [main] INFO  buildingcompany.Main - - Account number: CA123456789
+2023-06-16 21:52:09.970 [main] INFO  buildingcompany.Main -   Balance: -1000.0
+2023-06-16 21:52:09.971 [main] INFO  buildingcompany.Main -   Credit limit: 5000.0
+2023-06-16 21:52:09.971 [main] INFO  buildingcompany.Main -   Holders:
+2023-06-16 21:52:09.971 [main] INFO  buildingcompany.Main -   - Holder: John Doe
+2023-06-16 21:52:09.971 [main] INFO  buildingcompany.Main -   - Holder: Robert Davis
+2023-06-16 21:52:09.971 [main] INFO  buildingcompany.Main -   - Holder: William Thompson
+2023-06-16 21:52:09.971 [main] INFO  buildingcompany.Main - - Account number: CA987654321
+2023-06-16 21:52:09.972 [main] INFO  buildingcompany.Main -   Balance: -500.0
+2023-06-16 21:52:09.972 [main] INFO  buildingcompany.Main -   Credit limit: 2000.0
+2023-06-16 21:52:09.972 [main] INFO  buildingcompany.Main -   Holders:
+2023-06-16 21:52:09.972 [main] INFO  buildingcompany.Main -   - Holder: Jane Smith
+2023-06-16 21:52:09.972 [main] INFO  buildingcompany.Main -   - Holder: Emily Wilson
+2023-06-16 21:52:09.973 [main] INFO  buildingcompany.Main -   - Holder: Olivia Harris
