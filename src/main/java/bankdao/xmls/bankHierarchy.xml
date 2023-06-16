@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bankHierarchy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:noNamespaceSchemaLocation="bankHierarchy.xsd">
-    <bank>
+    <bankEntity>
         <name>Bank A</name>
         <branches>
             <branch>
@@ -18,14 +18,14 @@
                     <customer>
                         <name>David Johnson</name>
                         <accounts>
-                            <account>
+                            <accountEntity>
                                 <type>Savings</type>
                                 <balance>5000</balance>
-                            </account>
-                            <account>
+                            </accountEntity>
+                            <accountEntity>
                                 <type>Checking</type>
                                 <balance>2000</balance>
-                            </account>
+                            </accountEntity>
                         </accounts>
                     </customer>
                 </customers>
@@ -41,23 +41,23 @@
                     <customer>
                         <name>Michael Davis</name>
                         <accounts>
-                            <account>
+                            <accountEntity>
                                 <type>Savings</type>
                                 <balance>10000</balance>
-                            </account>
+                            </accountEntity>
                         </accounts>
                     </customer>
                     <customer>
                         <name>Lisa Wilson</name>
                         <accounts>
-                            <account>
+                            <accountEntity>
                                 <type>Checking</type>
                                 <balance>5000</balance>
-                            </account>
+                            </accountEntity>
                         </accounts>
                     </customer>
                 </customers>
             </branch>
         </branches>
-    </bank>
+    </bankEntity>
 </bankHierarchy>

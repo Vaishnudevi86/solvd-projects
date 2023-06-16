@@ -1,4 +1,4 @@
-package bankdao.model;
+package bankdao.entity;
 
 public class Loan {
     private int loan_id;

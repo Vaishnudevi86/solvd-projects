@@ -1,6 +1,6 @@
 package bankdao.jdbc;
 import bankdao.interfaces.BranchDAO;
-import bankdao.model.Branch;
+import bankdao.entity.Branch;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

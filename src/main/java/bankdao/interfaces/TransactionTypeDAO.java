@@ -1,7 +1,6 @@
 package bankdao.interfaces;
 
-import bankdao.model.Account;
-import bankdao.model.TransactionType;
+import bankdao.entity.TransactionType;
 
 import java.util.List;
 

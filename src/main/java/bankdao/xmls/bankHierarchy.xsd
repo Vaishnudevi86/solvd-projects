@@ -42,7 +42,7 @@
   </xs:complexType>
   <xs:complexType name="accountsType">
     <xs:sequence>
-      <xs:element type="accountType" name="account" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="accountType" name="accountEntity" maxOccurs="unbounded" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="customerType">
@@ -91,7 +91,7 @@
   </xs:complexType>
   <xs:complexType name="bankHierarchyType">
     <xs:sequence>
-      <xs:element type="bankType" name="bank"/>
+      <xs:element type="bankType" name="bankEntity"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

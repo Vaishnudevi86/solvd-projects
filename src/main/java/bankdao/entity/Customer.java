@@ -1,4 +1,4 @@
-package bankdao.model;
+package bankdao.entity;
 
 
 public class Customer {

@@ -1,7 +1,7 @@
 package bankdao.services;
 
 import bankdao.interfaces.AccountHolderDAO;
-import bankdao.model.AccountHolder;
+import bankdao.entity.AccountHolder;
 
 import java.util.List;
 

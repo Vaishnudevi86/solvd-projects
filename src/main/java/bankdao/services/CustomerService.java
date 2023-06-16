@@ -1,7 +1,7 @@
 package bankdao.services;
 
 import bankdao.interfaces.CustomerDAO;
-import bankdao.model.Customer;
+import bankdao.entity.Customer;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,80 +1,89 @@
 package bankdao.model;
 
 
-import bankJaxb.DateAdapter;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
 @XmlRootElement(name = "bank")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Bank {
-    @XmlJavaTypeAdapter(DateAdapter.class)
-    private Date established;
+    @JsonProperty("name")
+    private String name;
+    @JsonProperty("establishedDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @XmlElement(name = "establishedDate")
+    @XmlSchemaType(name = "date")
+    private Date establishedDate;
+    @JsonProperty("departments")
+    @XmlElementWrapper(name = "departments")
+    @XmlElement(name = "department")
+    private List<Department> departments;
+    @JsonProperty("accounts")
+    @XmlElementWrapper(name = "accounts")
+    @XmlElements({
+            @XmlElement(name = "savingsAccount", type = SavingsAccount.class),
+            @XmlElement(name = "creditAccount", type = CreditAccount.class)
+    })
+    private List<Account> accounts;
 
-    @XmlElementWrapper(name = "branches")
-    @XmlElement(name = "branch")
-    private List<Branch> branches;
+    // Getters and setters
 
-    private int bank_id;
-    private String bank_name;
-    private String address;
-    private String contact_number;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getEstablishedDate() {
+        return establishedDate;
+    }
+
+    public void setEstablishedDate(Date establishedDate) {
+        this.establishedDate = establishedDate;
+    }
+
+    public List<Department> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(List<Department> departments) {
+        this.departments = departments;
+    }
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
 
     public Bank() {
-
     }
 
-    public Bank(int bank_id, String bank_name, String address, String contact_number) {
-        this.bank_id = bank_id;
-        this.bank_name = bank_name;
-        this.address = address;
-        this.contact_number = contact_number;
+    public Bank(String name, Date establishedDate, List<Department> departments, List<Account> accounts) {
+        this.name = name;
+        this.establishedDate = establishedDate;
+        this.departments = departments;
+        this.accounts = accounts;
     }
-
-
-    public void setBank_id(int bank_id) {
-        this.bank_id = bank_id;
-    }
-
-    public String getBank_name() {
-        return bank_name;
-    }
-
-    public void setBank_name(String bank_name) {
-        this.bank_name = bank_name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getContact_number() {
-        return contact_number;
-    }
-
-    public void setContact_number(String contact_number) {
-        this.contact_number = contact_number;
-    }
-
 
     @Override
     public String toString() {
         return "Bank{" +
-                "established=" + established +
-                ", branches=" + branches +
-                ", bank_id=" + bank_id +
-                ", bank_name='" + bank_name + '\'' +
-                ", address='" + address + '\'' +
-                ", contact_number='" + contact_number + '\'' +
+                "name='" + name + '\'' +
+                ", establishedDate=" + establishedDate +
+                ", departments=" + departments +
+                ", accounts=" + accounts +
                 '}';
     }
 }
+
+
 

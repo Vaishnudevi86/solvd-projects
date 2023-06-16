@@ -1,4 +1,4 @@
-package bankdao.model;
+package bankdao.entity;
 
 public class AccountHolderTransaction {
     private int account_holder_transaction_id;

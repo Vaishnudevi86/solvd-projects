@@ -1,7 +1,6 @@
 package bankdao.interfaces;
 
-import bankdao.model.Account;
-import bankdao.model.Employee;
+import bankdao.entity.Employee;
 
 import java.util.List;
 
