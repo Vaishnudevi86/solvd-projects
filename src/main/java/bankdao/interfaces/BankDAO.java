@@ -1,15 +1,15 @@
 package bankdao.interfaces;
 
-import bankdao.entity.BankEntity;
+import bankdao.entity.Bank;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public interface BankDAO {
-        List<BankEntity> getAllBank() throws SQLException;
-        BankEntity getBank(int bank_id) throws SQLException;
-        void saveBank(BankEntity bankEntity) throws SQLException;
-        void updateBank(BankEntity bankEntity) throws SQLException;
-        void deleteBank(BankEntity bank_id) throws SQLException;
+        List<Bank> getAllBank() throws SQLException;
+        Bank getBank(int bank_id) throws SQLException;
+        void saveBank(Bank bankEntity) throws SQLException;
+        void updateBank(Bank bankEntity) throws SQLException;
+        void deleteBank(Bank bank_id) throws SQLException;
 }
 

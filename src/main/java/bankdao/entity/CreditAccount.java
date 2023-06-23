@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CreditAccountEntity extends AccountEntity {
+public class CreditAccount extends Account {
     @XmlElement(name = "creditLimit")
     private double creditLimit;
 
@@ -16,19 +16,19 @@ public class CreditAccountEntity extends AccountEntity {
     @XmlElement(name = "holder")
     private List<String> holders;
 
-    public CreditAccountEntity() {
+    public CreditAccount() {
     }
 
-    public CreditAccountEntity(int account_id, int branch_id, String account_type, double balance, int account_holder_id) {
+    public CreditAccount(String account_id, int branch_id, String account_type, double balance, int account_holder_id) {
         super(account_id, branch_id, account_type, balance, account_holder_id);
     }
 
-    public CreditAccountEntity(double creditLimit, List<String> holders) {
+    public CreditAccount(double creditLimit, List<String> holders) {
         this.creditLimit = creditLimit;
         this.holders = holders;
     }
 
-    public CreditAccountEntity(String accountNumber, double accountBalance, double creditLimit) {
+    public CreditAccount(String accountNumber, double accountBalance, double creditLimit) {
     }
 
     @Override

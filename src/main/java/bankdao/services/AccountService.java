@@ -1,7 +1,7 @@
 package bankdao.services;
 
 
-import bankdao.entity.AccountEntity;
+import bankdao.entity.Account;
 import bankdao.interfaces.AccountDAO;
 
 import java.sql.SQLException;
@@ -14,20 +14,20 @@ public class AccountService {
         this.accountDAO = accountDao ;
     }
 
-    public AccountEntity getAccountById(int id) {
+    public Account getAccountById(int id) {
         return accountDAO.getAccountById(id);
     }
 
-    public List<AccountEntity> getAllAccount() {
+    public List<Account> getAllAccount() {
         return accountDAO.getAllAccount();
     }
 
-    public void saveAccount(AccountEntity accountEntity) {
-        accountDAO.save(accountEntity);
+    public void saveAccount(Account account) {
+        accountDAO.save(account);
     }
 
-    public void updateAccount(AccountEntity accountEntity) throws SQLException {
-        accountDAO.update(accountEntity);
+    public void updateAccount(Account account) throws SQLException {
+        accountDAO.update(account);
     }
 
     public void deleteAccount(int accountId) {

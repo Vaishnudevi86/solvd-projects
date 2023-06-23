@@ -4,7 +4,7 @@ package bankdao.main;
 import bankdao.databaseConnection.DatabaseConnection;
 import bankdao.interfaces.BankDAO;
 import bankdao.jdbc.BankJdbcImpl;
-import bankdao.entity.BankEntity;
+import bankdao.entity.Bank;
 import bankdao.menu.Menu;
 import bankdao.services.BankService;
 

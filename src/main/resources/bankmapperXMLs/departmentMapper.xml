@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+
+<mapper namespace="bankBatis.mappers.DepartmentMapper">
+
+    <resultMap id="DepartmentResultMap" type="bankdao.entity.Department">
+        <id property="departmentId" column="department_id" />
+        <result property="departmentName" column="department_name" />
+        <result property="location" column="location" />
+        <result property="managerId" column="manager_id" />
+    </resultMap>
+
+    <select id="getDepartmentById" resultMap="DepartmentResultMap">
+        SELECT * FROM department WHERE department_id = #{departmentId}
+    </select>
+
+    <insert id="insertDepartment" parameterType="bankdao.entity.Department">
+        <selectKey resultType="int" keyProperty="departmentId" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO department (department_id, department_name, location, manager_id)
+        VALUES (#{departmentId}, #{departmentName}, #{location}, #{managerId})
+    </insert>
+
+    <update id="updateDepartment" parameterType="bankdao.entity.Department">
+        UPDATE department
+        SET department_name = #{departmentName},
+        location = #{location},
+        manager_id = #{managerId}
+        WHERE department_id = #{departmentId}
+    </update>
+
+    <delete id="deleteDepartment" parameterType="int">
+        DELETE FROM department WHERE department_id = #{departmentId}
+    </delete>
+
+</mapper>

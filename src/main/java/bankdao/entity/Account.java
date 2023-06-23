@@ -1,21 +1,18 @@
 package bankdao.entity;
 
 
-    public class AccountEntity {
-    private String accountNumber;
-
-
+    public class Account {
         private double balance;
-        private int account_id;
+        private String account_id;
         private int branch_id;
         private String account_type;
 
         private int account_holder_id;
 
-        public AccountEntity() {
+        public Account() {
         }
 
-        public AccountEntity(int account_id, int branch_id, String account_type, double balance, int account_holder_id) {
+        public Account(String account_id, int branch_id, String account_type, double balance, int account_holder_id) {
             this.account_id = account_id;
             this.branch_id = branch_id;
             this.account_type = account_type;
@@ -23,11 +20,11 @@ package bankdao.entity;
             this.account_holder_id = account_holder_id;
         }
 
-        public int getAccount_id() {
+        public String getAccount_id() {
             return account_id;
         }
 
-        public void setAccount_id(int account_id) {
+        public void setAccount_id(String account_id) {
             this.account_id = account_id;
         }
 
@@ -63,13 +60,7 @@ package bankdao.entity;
             this.account_holder_id = account_holder_id;
         }
 
-        public String getAccountNumber() {
-            return accountNumber;
-        }
 
-        public void setAccountNumber(String accountNumber) {
-            this.accountNumber = accountNumber;
-        }
 
         @Override
         public String toString() {
