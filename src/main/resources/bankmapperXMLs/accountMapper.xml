@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace="bankBatis.mappers.AccountMapper">
+
+    <insert id="createAccount" parameterType="bankdao.entity.Account">
+        INSERT INTO account (account_id, branch_id, account_type, balance, account_holder_id)
+        VALUES (#{accountId}, #{branchId}, #{accountType}, #{balance}, #{accountHolderId})
+    </insert>
+
+    <update id="updateAccount" parameterType="bankdao.entity.Account">
+        UPDATE account
+        SET branch_id = #{branchId}, account_type = #{accountType}, balance = #{balance}, account_holder_id = #{accountHolderId}
+        WHERE account_id = #{accountId}
+    </update>
+
+    <delete id="deleteAccountByAccountId" parameterType="String">
+        DELETE FROM account WHERE account_id = #{accountID}
+    </delete>
+
+    <select id="selectAccountByAccountId" parameterType="String" resultMap="accountResultMap">
+        SELECT * FROM account WHERE account_Id = #{accountId}
+    </select>
+
+    <select id="getAllAccounts" resultMap="accountResultMap">
+        SELECT * FROM account
+    </select>
+
+    <resultMap id="accountResultMap" type="bankdao.entity.Account">
+        <id property="accountId" column="account_id"/>
+        <result property="branchId" column="branch_id"/>
+        <result property="accountType" column="account_type"/>
+        <result property="balance" column="balance"/>
+        <result property="accountHolderId" column="account_holder_id"/>
+    </resultMap>
+
+</mapper>

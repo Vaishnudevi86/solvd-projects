@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <typeAliases>
+        <typeAlias type="bankdao.entity.Account" alias="Account"/>
+        <typeAlias type="bankdao.entity.Bank" alias="Bank"/>
+        <typeAlias type="bankdao.entity.Department" alias="Department"/>
+        <typeAlias type="bankdao.entity.Employee" alias="Employee"/>
+        <typeAlias type="bankdao.entity.CreditAccount" alias="CreditAccount"/>
+        <typeAlias type="bankdao.entity.SavingsAccount" alias="SavingsAccount"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!-- Add your mapper XML files or mapper interfaces here -->
+        <mapper resource="bankmapperXMLs/accountMapper.xml"/>
+        <mapper resource="bankmapperXMLs/bankMapper.xml"/>
+        <mapper resource="bankmapperXMLs/departmentMapper.xml"/>
+        <mapper resource="bankmapperXMLs/employeeMapper.xml"/>
+        <mapper resource="bankmapperXMLs/creditAccountMapper.xml"/>
+        <mapper resource="bankmapperXMLs/savingsAccountMapper.xml"/>
+        <!-- Add more mappers as needed -->
+    </mappers>
+</configuration>

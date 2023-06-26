@@ -1,9 +1,9 @@
 package bankdao.menu;
 
-import bankdao.entity.AccountEntity;
-import bankdao.entity.BankEntity;
-import bankdao.entity.CreditAccountEntity;
-import bankdao.entity.SavingsAccountEntity;
+import bankdao.entity.Account;
+import bankdao.entity.Bank;
+import bankdao.entity.CreditAccount;
+import bankdao.entity.SavingsAccount;
 import bankdao.services.AccountService;
 import bankdao.services.BankService;
 import bankdao.services.EmployeeService;
@@ -141,27 +141,27 @@ public class Menu {
     private void updateBankDetails(Scanner scanner) {
         logger.info("Choose the bank ID for which you want to update:");
         try {
-            List<BankEntity> bankEntityList = bankService.getAllBanks();
-            bankEntityList.forEach(bankEntity -> logger.info(bankEntity.getBank_id() + "\t" + bankEntity.getBank_name()));
+            List<Bank> bankList = bankService.getAllBanks();
+            bankList.forEach(bank -> logger.info(bank.getId() + "\t" + bank.getName()));
             int bankID = scanner.nextInt();
             logger.info("Select option to update");
             logger.info("1. Address 2. Contact Number");
             int updateChoice = scanner.nextInt();
             scanner.nextLine();
-            BankEntity bankEntity = new BankEntity();
-            bankEntity.setBank_id(bankID);
+            Bank bank = new Bank();
+            bank.setId(bankID);
             switch (updateChoice) {
                 case 1:
                     logger.info("Enter new address");
                     String newAddress = scanner.nextLine();
-                    bankEntity.setAddress(newAddress);
-                    bankService.updateBank(bankEntity);
+                    bank.setAddress(newAddress);
+                    bankService.updateBank(bank);
                     break;
                 case 2:
                     logger.info("Enter new contact number");
                     String newContact = scanner.nextLine();
-                    bankEntity.setContact_number(newContact);
-                    bankService.updateBank(bankEntity);
+                    bank.setContactNumber(newContact);
+                    bankService.updateBank(bank);
                     break;
             }
         } catch (SQLException e) {
@@ -174,8 +174,8 @@ public class Menu {
     private void getBankDetails(Scanner scanner)  {
         try{
             logger.info("Getting all bank details:");
-            List<BankEntity> bankEntityList = bankService.getAllBanks();
-            bankEntityList.forEach(bankEntity -> logger.info(bankEntity.toString()));
+            List<Bank> bankList = bankService.getAllBanks();
+            bankList.forEach(bank -> logger.info(bank.toString()));
         }
         catch(SQLException e){
 
@@ -191,8 +191,8 @@ public class Menu {
             String bankAddress = scanner.nextLine();
             logger.info("Enter Bank Contact Number:");
             String bankContactNumber = scanner.nextLine();
-            BankEntity bankEntity = new BankEntity(bankName, bankAddress, bankContactNumber);
-            bankService.saveBank(bankEntity);
+            Bank bank = new Bank( );
+            bankService.saveBank(bank);
             logger.info("Successfully Created Bank " + bankName);
         }catch (SQLException sqlException) {
             logger.info("Caught exception while saving bank details");
@@ -206,7 +206,7 @@ public class Menu {
 
         try {
             logger.info("Select option to update");
-            BankEntity bank = bankService.getBankById(bankId);
+            Bank bank = bankService.getBankById(bankId);
             if (bank != null) {
                 bankService.deleteBank(bank);
                 logger.info("Bank deleted successfully.");

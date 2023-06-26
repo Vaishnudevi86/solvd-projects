@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace="bankBatis.mappers.SavingsAccountMapper">
+
+    <resultMap id="SavingsAccountResultMap" type="bankdao.entity.SavingsAccount">
+        <id property="accountId" column="account_id" />
+        <result property="accountNumber" column="account_number" />
+        <result property="balance" column="balance" />
+        <result property="interestRate" column="interest_rate" />
+    </resultMap>
+
+    <select id="getSavingsAccountById" resultMap="SavingsAccountResultMap">
+        SELECT * FROM savings_account WHERE account_id = #{accountId}
+    </select>
+
+    <insert id="insertSavingsAccount" parameterType="bankdao.entity.SavingsAccount">
+        INSERT INTO savings_account (account_id, account_number, balance, interest_rate)
+        VALUES (#{accountId}, #{accountNumber}, #{balance}, #{interestRate})
+    </insert>
+
+    <update id="updateSavingsAccount" parameterType="bankdao.entity.SavingsAccount">
+        UPDATE savings_account
+        SET account_number = #{accountNumber},
+        balance = #{balance},
+        interest_rate = #{interestRate}
+        WHERE account_id = #{accountId}
+    </update>
+
+    <delete id="deleteSavingsAccount" parameterType="int">
+        DELETE FROM savings_account WHERE account_id = #{accountId}
+    </delete>
+
+</mapper>

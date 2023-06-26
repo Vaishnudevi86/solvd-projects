@@ -1,4 +1,4 @@
-package bankdao.xmls;
+package xmls;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.*;

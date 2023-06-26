@@ -1,8 +1,7 @@
 package bankdao.jdbc;
 
-import bankdao.entity.AccountEntity;
-import bankdao.entity.AccountEntity;
-import bankdao.entity.SavingsAccountEntity;
+import bankdao.entity.Account;
+import bankdao.entity.SavingsAccount;
 import bankdao.interfaces.AccountDAO;
 
 import java.sql.Connection;
@@ -27,26 +26,26 @@ public class AccountJdbcImpl implements AccountDAO {
         this.conn1 = conn1;
     }
     @Override
-    public AccountEntity getAccountById(int account_id) {
-        AccountEntity accountEntity = null;
+    public Account getAccountById(int account_id) {
+        Account account = null;
         try (PreparedStatement stmt1 = conn1.prepareStatement(SELECT_QUERY)) {
             stmt1.setInt(1, account_id);
             rs1 = stmt1.executeQuery();
             if (rs1.next()) {
-                accountEntity = new AccountEntity();
-                accountEntity.setAccount_id(rs1.getInt("account_id"));
-                accountEntity.setBranch_id(rs1.getInt("branch_id"));
-                accountEntity.setBalance(rs1.getDouble("balance"));
-                accountEntity.setAccount_type(rs1.getString("account_type"));
-                accountEntity.setAccount_holder_id(rs1.getInt("account_holder_id"));
+                account = new Account();
+                account.setAccount_id(rs1.getString("account_id"));
+                account.setBranch_id(rs1.getInt("branch_id"));
+                account.setBalance(rs1.getDouble("balance"));
+                account.setAccount_type(rs1.getString("account_type"));
+                account.setAccount_holder_id(rs1.getInt("account_holder_id"));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return accountEntity;
+        return account;
     }
     @Override
-    public void save(AccountEntity accountEntity) {
+    public void save(Account account) {
         int maxAccountId = 0;
         try (PreparedStatement stmt1 = conn1.prepareStatement(SELECT_MAX_ACCOUNT_ID)) {
             rs1 = stmt1.executeQuery();
@@ -58,22 +57,22 @@ public class AccountJdbcImpl implements AccountDAO {
         }
         try (PreparedStatement stmt1 = conn1.prepareStatement(SAVE_QUERY)) {
             stmt1.setInt(1, maxAccountId+1);
-            stmt1.setInt(2, accountEntity.getBranch_id());
-            stmt1.setString(3, accountEntity.getAccount_type());
-            stmt1.setDouble(4, accountEntity.getBalance());
-            stmt1.setInt(5, accountEntity.getAccount_holder_id());
+            stmt1.setInt(2, account.getBranch_id());
+            stmt1.setString(3, account.getAccount_type());
+            stmt1.setDouble(4, account.getBalance());
+            stmt1.setInt(5, account.getAccount_holder_id());
             stmt1.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
     @Override
-    public void update(AccountEntity accountEntity) throws SQLException {
+    public void update(Account account) throws SQLException {
         try (PreparedStatement stmt1 = conn1.prepareStatement(UPDATE_QUERY)) {
-            stmt1.setInt(2, accountEntity.getBranch_id());
-            stmt1.setString(3, accountEntity.getAccount_type());
-            stmt1.setDouble(4, accountEntity.getBalance());
-            stmt1.setInt(5, accountEntity.getAccount_holder_id());
+            stmt1.setInt(2, account.getBranch_id());
+            stmt1.setString(3, account.getAccount_type());
+            stmt1.setDouble(4, account.getBalance());
+            stmt1.setInt(5, account.getAccount_holder_id());
             stmt1.executeUpdate();
         }
     }
@@ -88,18 +87,18 @@ public class AccountJdbcImpl implements AccountDAO {
     }
 
     @Override
-    public List<AccountEntity> getAllAccount() {
-        List<AccountEntity> accountEntities = new ArrayList<>();
-        AccountEntity accountEntity = null;
+    public List<Account> getAllAccount() {
+        List<Account> accountEntities = new ArrayList<>();
+        Account account = null;
         try (PreparedStatement stmt1 = conn1.prepareStatement(SELECT_ALL_QUERY)) {
             rs1 = stmt1.executeQuery();
             while (rs1.next()) {
-                accountEntity = new SavingsAccountEntity();
-                accountEntity.setAccount_type(rs1.getString("Account_type"));
-                accountEntity.setAccount_id(rs1.getInt("Account_id"));
-                accountEntity.setAccount_holder_id(rs1.getInt("Account_holder_id"));
-                accountEntity.setBranch_id(rs1.getInt("Branch_id"));
-                accountEntities.add(accountEntity);
+                account = new SavingsAccount();
+                account.setAccount_type(rs1.getString("Account_type"));
+                account.setAccount_id(rs1.getString("Account_id"));
+                account.setAccount_holder_id(rs1.getInt("Account_holder_id"));
+                account.setBranch_id(rs1.getInt("Branch_id"));
+                accountEntities.add(account);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

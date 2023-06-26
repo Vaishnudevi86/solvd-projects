@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<!-- EmployeeMapper.xml -->
+<mapper namespace="bankBatis.mappers.EmployeeMapper">
+
+    <resultMap id="EmployeeResultMap" type="bankdao.entity.Employee">
+        <id property="employeeId" column="employee_id" />
+        <result property="employeeName" column="employee_name" />
+        <result property="branchId" column="branch_id" />
+        <result property="designation" column="designation" />
+        <result property="salary" column="salary" />
+    </resultMap>
+
+    <select id="selectEmployeeById" resultMap="EmployeeResultMap">
+        SELECT * FROM employee WHERE employee_id = #{employeeId}
+    </select>
+
+    <insert id="insertEmployee" parameterType="bankdao.entity.Employee">
+        INSERT INTO employee (employee_id, employee_name, branch_id, designation, salary)
+        VALUES (#{employeeId}, #{employeeName}, #{branchId}, #{designation}, #{salary})
+    </insert>
+
+    <update id="updateEmployee" parameterType="bankdao.entity.Employee">
+        UPDATE employee
+        SET employee_name = #{employeeName},
+        branch_id = #{branchId},
+        designation = #{designation},
+        salary = #{salary}
+        WHERE employee_id = #{employeeId}
+    </update>
+
+    <delete id="deleteEmployee" parameterType="int">
+        DELETE FROM employee WHERE employee_id = #{employeeId}
+    </delete>
+
+</mapper>

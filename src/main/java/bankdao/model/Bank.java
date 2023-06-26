@@ -11,6 +11,8 @@ import java.util.List;
 @XmlRootElement(name = "bank")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Bank {
+
+    private int id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("establishedDate")
@@ -82,6 +84,10 @@ public class Bank {
                 ", departments=" + departments +
                 ", accounts=" + accounts +
                 '}';
+    }
+
+    public Integer getId() {
+        return id;
     }
 }
 
