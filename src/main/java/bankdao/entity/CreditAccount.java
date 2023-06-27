@@ -1,6 +1,4 @@
 package bankdao.entity;
-
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -19,7 +17,7 @@ public class CreditAccount extends Account {
     public CreditAccount() {
     }
 
-    public CreditAccount(String account_id, int branch_id, String account_type, double balance, int account_holder_id) {
+    public CreditAccount(int account_id, String branch_id, String account_type, double balance, String account_holder_id) {
         super(account_id, branch_id, account_type, balance, account_holder_id);
     }
 
@@ -28,7 +26,13 @@ public class CreditAccount extends Account {
         this.holders = holders;
     }
 
-    public CreditAccount(String accountNumber, double accountBalance, double creditLimit) {
+    public CreditAccount(int accountId, String branchId, String accountType, double balance, String accountHolderId, double creditLimit, List<String> holders) {
+        super(accountId, branchId, accountType, balance, accountHolderId);
+        this.creditLimit = creditLimit;
+        this.holders = holders;
+    }
+
+     public CreditAccount(int accountId, String branchId, String accountType, double balance, String accountHolderId, double creditLimit) {
     }
 
     @Override
@@ -38,6 +42,8 @@ public class CreditAccount extends Account {
                 ", holders=" + holders +
                 '}';
     }
+
+
 // Getters and setters
 
     public double getCreditLimit() {

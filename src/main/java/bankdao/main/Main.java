@@ -1,6 +1,4 @@
 package bankdao.main;
-
-
 import bankdao.databaseConnection.DatabaseConnection;
 import bankdao.interfaces.BankDAO;
 import bankdao.jdbc.BankJdbcImpl;

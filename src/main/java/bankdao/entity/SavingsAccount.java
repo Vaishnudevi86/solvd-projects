@@ -24,7 +24,7 @@ public class SavingsAccount extends Account {
         this.holders = holders;
     }
 
-      public SavingsAccount(String account_id, int branch_id, String account_type, double balance, int account_holder_id) {
+      public SavingsAccount(int account_id, String branch_id, String account_type, double balance, String account_holder_id) {
         super(account_id, branch_id, account_type, balance, account_holder_id);
     }
 

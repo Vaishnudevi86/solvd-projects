@@ -108,12 +108,8 @@ import java.util.List;
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", position='" + position + '\'' +
-                ", hireDate=" + hireDate +
-                ", employeeList=" + employeeList +
-                ", employeeId=" + employeeId +
+        return "Employee{"+
+                " employeeId=" + employeeId +
                 ", employeeName='" + employeeName + '\'' +
                 ", branchId=" + branchId +
                 ", designation='" + designation + '\'' +
@@ -121,11 +117,7 @@ import java.util.List;
                 '}';
     }
 
-    public Employee(String name, String position, Date hireDate, List<Employee> employeeList, int employeeId, String employeeName, int branchId, String designation, double salary) {
-        this.name = name;
-        this.position = position;
-        this.hireDate = hireDate;
-        this.employeeList = employeeList;
+    public Employee( int employeeId, String employeeName, int branchId, String designation, double salary) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.branchId = branchId;

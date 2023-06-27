@@ -5,11 +5,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import bankdao.entity.Account;
-
 import java.util.List;
-
 public class AccountService {
-
     Logger logger = LogManager.getLogger(AccountService.class.getName());
 
     public Account selectAccountByAccountId(int accountId) {
@@ -18,7 +15,6 @@ public class AccountService {
             return accountMapper.selectAccountByAccountId(accountId);
         }
     }
-
     public List<Account> getAllAccounts() {
         try (SqlSession session = MyBatisUtil.getSqlSessionFactory().openSession()) {
             AccountMapper accountMapper = session.getMapper(AccountMapper.class);
@@ -30,7 +26,7 @@ public class AccountService {
         SqlSession session = MyBatisUtil.getSqlSessionFactory().openSession(true);
         AccountMapper accountMapper = session.getMapper(AccountMapper.class);
         accountMapper.createAccount(account);
-        logger.info("Account number: " + account.getAccount_id() + " -> Insert account successfully");
+        logger.info("Account number: " + account.getAccountId() + " -> Insert account successfully");
         session.close();
     }
 
@@ -38,7 +34,7 @@ public class AccountService {
         SqlSession session = MyBatisUtil.getSqlSessionFactory().openSession(true);
         AccountMapper accountMapper = session.getMapper(AccountMapper.class);
         accountMapper.updateAccount(account);
-        logger.info("Account number: " + account.getAccount_id() + " -> Updated successfully!");
+        logger.info("Account number: " + account.getAccountId() + " -> Updated successfully!");
         session.close();
     }
 
