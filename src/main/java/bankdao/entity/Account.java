@@ -1,76 +1,74 @@
 package bankdao.entity;
 
+public class Account {
+    private int accountId;
+    private String branchId;
+    private String accountType;
+    private double balance;
+    private String accountHolderId;
 
-    public class Account {
-        private double balance;
-        private String account_id;
-        private int branch_id;
-        private String account_type;
+    public Account() {
 
-        private int account_holder_id;
-
-        public Account() {
-        }
-
-        public Account(String account_id, int branch_id, String account_type, double balance, int account_holder_id) {
-            this.account_id = account_id;
-            this.branch_id = branch_id;
-            this.account_type = account_type;
-            this.balance = balance;
-            this.account_holder_id = account_holder_id;
-        }
-
-        public String getAccount_id() {
-            return account_id;
-        }
-
-        public void setAccount_id(String account_id) {
-            this.account_id = account_id;
-        }
-
-        public int getBranch_id() {
-            return branch_id;
-        }
-
-        public void setBranch_id(int branch_id) {
-            this.branch_id = branch_id;
-        }
-
-        public String getAccount_type() {
-            return account_type;
-        }
-
-        public void setAccount_type(String account_type) {
-            this.account_type = account_type;
-        }
-
-        public double getBalance() {
-            return balance;
-        }
-
-        public void setBalance(double balance) {
-            this.balance = balance;
-        }
-
-        public int getAccount_holder_id() {
-            return account_holder_id;
-        }
-
-        public void setAccount_holder_id(int account_holder_id) {
-            this.account_holder_id = account_holder_id;
-        }
-
-
-
-        @Override
-        public String toString() {
-            return "Account{" +
-                    "account_id=" + account_id +
-                    ", branch_id=" + branch_id +
-                    ", account_type='" + account_type + '\'' +
-                    ", balance=" + balance +
-                    ", account_holder_id=" + account_holder_id +
-                    '}';
-        }
     }
 
+    public int getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getBranchId() {
+        return branchId;
+    }
+
+    public void setBranchId(String branchId) {
+        this.branchId = branchId;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public String getAccountHolderId() {
+        return accountHolderId;
+    }
+
+    public void setAccountHolderId(String accountHolderId) {
+        this.accountHolderId = accountHolderId;
+    }
+
+    // Constructors, toString(), equals(), and hashCode() methods
+
+    public Account(int accountId, String branchId, String accountType, double balance, String accountHolderId) {
+        this.accountId = accountId;
+        this.branchId = branchId;
+        this.accountType = accountType;
+        this.balance = balance;
+        this.accountHolderId = accountHolderId;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountId=" + accountId +
+                ", branchId='" + branchId + '\'' +
+                ", accountType='" + accountType + '\'' +
+                ", balance=" + balance +
+                ", accountHolderId='" + accountHolderId + '\'' +
+                '}';
+    }
+}

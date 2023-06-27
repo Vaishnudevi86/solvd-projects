@@ -15,6 +15,13 @@
     <select id="selectEmployeeById" resultMap="EmployeeResultMap">
         SELECT * FROM employee WHERE employee_id = #{employeeId}
     </select>
+    <!-- Add the selectEmployeeWithDepartment query -->
+    <select id="selectEmployeeWithDepartment" resultMap="EmployeeResultMap">
+        SELECT e.employee_id, e.employee_name, e.branch_id, e.designation, e.salary, d.department_id, d.department_name, d.location
+        FROM employee e
+        JOIN department d ON e.department_id = d.department_id
+        WHERE e.employee_id = #{employeeId}
+    </select>
 
     <insert id="insertEmployee" parameterType="bankdao.entity.Employee">
         INSERT INTO employee (employee_id, employee_name, branch_id, designation, salary)

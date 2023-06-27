@@ -7,7 +7,7 @@ public class Bank {
     private String address;
     private String contactNumber;
 
-    public int getId() {
+      public int getId() {
         return id;
     }
 

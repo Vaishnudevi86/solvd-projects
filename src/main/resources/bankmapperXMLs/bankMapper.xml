@@ -10,9 +10,15 @@
         <result property="address" column="address"/>
         <result property="contactNumber" column="contact_number"/>
     </resultMap>
-
     <select id="selectBankById" parameterType="int" resultMap="bankResultMap">
         SELECT * FROM bank WHERE bank_id = #{id}
+    </select>
+    <!-- Add the selectBankWithDepartments query -->
+    <select id="selectBankWithDepartments" parameterType="int" resultMap="bankResultMap">
+        SELECT b.bank_id, b.bank_name, b.address, b.contact_number, d.department_id, d.department_name, d.location, d.manager_id
+        FROM bank b
+        LEFT JOIN department d ON b.bank_id = d.bank_id
+        WHERE b.bank_id = #{id}
     </select>
 
     <insert id="insertBank" parameterType="bankdao.entity.Bank">

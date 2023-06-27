@@ -1,6 +1,5 @@
 package bankBatis.main;
 import bankBatis.mappers.*;
-import bankdao.entity.Account;
 import bankdao.entity.Bank;
 import bankdao.entity.Department;
 import bankdao.entity.Employee;
@@ -8,9 +7,9 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
 import java.io.IOException;
 import java.io.Reader;
+import static com.solvd.practice.Main.logger;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,29 +33,35 @@ public class Main {
 
             // Perform operations using the mappers
             // Example: Select a bank by ID
-            Bank bank = bankMapper.selectBankById(67);
-            System.out.println("Bank: " + bank.getName());
-            System.out.println("Bank ID: " + bank.getId());
-            System.out.println("Bank Address: " + bank.getAddress());
-            System.out.println("Contact Number: " + bank.getContactNumber());
+            Bank bank = bankMapper.selectBankById(235);
+            logger.info("Bank: " + bank.getName());
+            logger.info("Bank ID: " + bank.getId());
+            logger.info("Bank Address: " + bank.getAddress());
+            logger.info("Contact Number: " + bank.getContactNumber());
 
             // Example: Insert a new department
             Department department = new Department();
-            department.setDepartmentName("Customer Service Department");
-            department.setLocation("New York");
-            department.setManagerId(123);
+            department.setDepartmentName("Loan Department");
+            department.setLocation("Atlanta");
+            department.setManagerId(156);
             departmentMapper.insertDepartment(department);
-            System.out.println("New department inserted with ID: " + department.getDepartmentId());
+            logger.info("New department inserted with ID: " + department.getDepartmentId());
+            logger.info("Department Name: " + department.getDepartmentName());
+            logger.info("Location: " + department.getLocation());
+            logger.info("Manager ID: " + department.getManagerId());
 
             // Example: Update an employee
-            Employee employee = employeeMapper.selectEmployeeById(2);
-            System.out.println("Original employee: " + employee);
-
+            Employee employee = employeeMapper.selectEmployeeById(3);
+            logger.info("Original employee: " + employee);
             employee.setEmployeeName("Jones");
             employeeMapper.updateEmployee(employee);
+            logger.info("Employee updated successfully!");
+            logger.info("Updated employee details: " + employee);
 
-            System.out.println("Employee updated successfully!");
-            System.out.println("Updated employee details: " + employee);
+            // Example: Delete an employee
+            int employeeIdToDelete = 2; // ID of the employee to delete
+            employeeMapper.deleteEmployee(employeeIdToDelete);
+            logger.info("Employee with ID " + employeeIdToDelete + " has been deleted.");
 
             // Commit the transaction
             sqlSession.commit();

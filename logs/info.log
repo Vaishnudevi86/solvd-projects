@@ -43,3 +43,108 @@
 2023-06-23 00:28:37.452 [main] INFO  buildingcompany.Main - 3. Update Bank Details
 2023-06-23 00:28:37.452 [main] INFO  buildingcompany.Main - 4. Delete Bank
 2023-06-23 00:28:37.452 [main] INFO  buildingcompany.Main - 0. Exit
+2023-06-23 12:45:29.438 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 12:45:29.444 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 12:45:29.444 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 12:45:29.444 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 12:45:29.453 [main] INFO  buildingcompany.Main - New department inserted with ID: 14
+2023-06-23 12:45:29.453 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 12:45:29.454 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 12:45:29.454 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 12:45:29.468 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=2, employeeName='Jones', branchId=2, designation='Sales Representative', salary=3000.0}
+2023-06-23 12:45:29.474 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 12:45:29.474 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=2, employeeName='Jones', branchId=2, designation='Sales Representative', salary=3000.0}
+2023-06-23 12:45:29.477 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 12:54:50.507 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 12:54:50.512 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 12:54:50.512 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 12:54:50.513 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 12:54:50.527 [main] INFO  buildingcompany.Main - New department inserted with ID: 15
+2023-06-23 12:54:50.528 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 12:54:50.528 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 12:54:50.528 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 12:54:50.530 [main] INFO  buildingcompany.Main - Original employee: null
+2023-06-23 12:55:23.106 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 12:55:23.111 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 12:55:23.111 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 12:55:23.111 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 12:55:23.121 [main] INFO  buildingcompany.Main - New department inserted with ID: 16
+2023-06-23 12:55:23.121 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 12:55:23.121 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 12:55:23.122 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 12:55:23.135 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='Michael Johnson', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 12:55:23.141 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 12:55:23.142 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 12:55:23.144 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 12:55:52.036 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 12:55:52.039 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 12:55:52.039 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 12:55:52.039 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 12:55:52.049 [main] INFO  buildingcompany.Main - New department inserted with ID: 17
+2023-06-23 12:55:52.049 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 12:55:52.049 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 12:55:52.050 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 12:55:52.063 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='Michael Johnson', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 12:55:52.069 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 12:55:52.069 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 12:55:52.072 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 21:21:11.308 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 21:21:11.313 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 21:21:11.313 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 21:21:11.313 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 21:21:11.350 [main] INFO  buildingcompany.Main - New department inserted with ID: 18
+2023-06-23 21:21:11.350 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 21:21:11.351 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 21:21:11.351 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 21:21:11.364 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 21:21:11.373 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 21:21:11.373 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 21:21:11.377 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 21:28:58.939 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 21:28:58.942 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 21:28:58.943 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 21:28:58.943 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 21:28:58.954 [main] INFO  buildingcompany.Main - New department inserted with ID: 19
+2023-06-23 21:28:58.954 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 21:28:58.955 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 21:28:58.955 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 21:28:58.967 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 21:28:58.971 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 21:28:58.972 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 21:28:58.975 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 21:52:02.985 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 21:52:02.989 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 21:52:02.989 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 21:52:02.989 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 21:52:03.000 [main] INFO  buildingcompany.Main - New department inserted with ID: 20
+2023-06-23 21:52:03.000 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 21:52:03.000 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 21:52:03.000 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 21:52:03.011 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 21:52:03.016 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 21:52:03.016 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='James', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 21:52:03.018 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 22:22:46.607 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 22:22:46.612 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 22:22:46.613 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 22:22:46.613 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 22:22:46.627 [main] INFO  buildingcompany.Main - New department inserted with ID: 21
+2023-06-23 22:22:46.628 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 22:22:46.628 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 22:22:46.628 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 22:22:46.640 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='James', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 22:22:46.644 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 22:22:46.644 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='James', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 22:22:46.647 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
+2023-06-23 22:23:41.410 [main] INFO  buildingcompany.Main - Bank: New Bank B
+2023-06-23 22:23:41.415 [main] INFO  buildingcompany.Main - Bank ID: 235
+2023-06-23 22:23:41.415 [main] INFO  buildingcompany.Main - Bank Address: No 56 first street GA
+2023-06-23 22:23:41.415 [main] INFO  buildingcompany.Main - Contact Number: 4453553767
+2023-06-23 22:23:41.424 [main] INFO  buildingcompany.Main - New department inserted with ID: 22
+2023-06-23 22:23:41.424 [main] INFO  buildingcompany.Main - Department Name: Loan Department
+2023-06-23 22:23:41.424 [main] INFO  buildingcompany.Main - Location: Atlanta
+2023-06-23 22:23:41.424 [main] INFO  buildingcompany.Main - Manager ID: 156
+2023-06-23 22:23:41.438 [main] INFO  buildingcompany.Main - Original employee: Employee{ employeeId=3, employeeName='James', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 22:23:41.445 [main] INFO  buildingcompany.Main - Employee updated successfully!
+2023-06-23 22:23:41.445 [main] INFO  buildingcompany.Main - Updated employee details: Employee{ employeeId=3, employeeName='Jones', branchId=1, designation='Accountant', salary=4000.0}
+2023-06-23 22:23:41.448 [main] INFO  buildingcompany.Main - Employee with ID 2 has been deleted.
